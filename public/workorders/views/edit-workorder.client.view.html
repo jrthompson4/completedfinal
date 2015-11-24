@@ -1,0 +1,42 @@
+<section data-ng-controller="WorkOrderController" data-ng-init="findOne()">
+  <h1>Edit Work Order</h1>
+  <form data-ng-submit="update()" novalidate>
+    <div>
+      <label for="Building">Building</label>
+      <select data-ng-model="workorder.Building" id="Building" required name="Select Building">
+          <option value="Clubhouse">Clubhouse</option>
+          <option value="Continental">Continental</option>
+          <option value="Harrington">Harrington</option>
+          <option value="Moore">Moore</option>
+          <option value="Park Place Towers">Park Place Towers</option>
+          <option value="Plemons">Plemons</option>
+          <option value="Talmage">Talmage</option>
+          <option value="Ware">Ware</option>
+      </select>
+    </div>
+        <div>
+      <label for="AptNumber">Apartment Number</label>
+      <div>
+        <input type="text" data-ng-model="workorder.AptNumber" id="AptNumber" placeholder="AptNumber" required>
+      </div>
+    </div>
+    <div>
+      <label for="ProblemDescription">Content</label>
+      <div>
+        <textarea data-ng-model="workorder.ProblemDescription" id="ProblemDescription" cols="30" rows="10" placeholder="ProblemDescription"></textarea>
+      </div>
+    </div>
+        <div>
+      <label for="PhoneNumber">Phone Number</label>
+      <div>
+        <input type="text" data-ng-model="workorder.PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber" required>
+      </div>
+    </div>
+    <div>
+      <input type="submit" value="Update">
+    </div>
+    <div data-ng-show="error">
+      <strong data-ng-bind="error"></strong>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,19 @@
+<section data-ng-controller="WorkOrderController" data-ng-init="find()">
+  <h1>Work Orders</h1>
+  <ul>
+    <li data-ng-repeat="workorder in workorders">
+      <a data-ng-href="#!/workorders/{{workorder._id}}" data-ng-bind="workorder.Building"></a>
+      <br>
+      <small data-ng-bind="workorder.created | date:'medium'"></small>
+      <small>/</small>
+      <small data-ng-bind="workorder.AptNumber"></small>
+      <p data-ng-bind="workorder.Building"></p>
+      <p data-ng-bind="workorder.AptNumber"></p>
+      <p data-ng-bind="workorder.ProblemDescription"></p>
+      <p data-ng-bind="workorder.completed"></p>
+      <p data-ng-bind="workorder.firstname"><p data-ng-bind="workorder.lastname"></p></p>
+  </ul>
+ <div data-ng-hide="!workorders || workorders.length">
+    No Work Orders yet, why don't you <a href="/#!/workorders/create">create one</a>?
+  </div>
+</section>

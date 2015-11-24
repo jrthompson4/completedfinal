@@ -1,0 +1,61 @@
+<section data-ng-controller="WorkOrderController">
+      <ul>
+      <li><a href="/#!/workorders">List Work Orders</a></li>
+      <li><a href="/#!/workorders/create">Create Work Orders</a></li>
+      <li><a href="/#!/workorders/:workorderId">View Work Order</a></li>
+      <li><a href="/#!/workorders/:workorderId/edit">Edit Work Order</a></li>
+    </ul>
+<h1>New Work Order</h1>
+
+
+  <form data-ng-submit="create()" novalidate>
+    
+    <div>
+      <label for="firstname">First Name</label>
+      <div>
+        <input type="text" data-ng-model="firstname" id="firstname" placeholder="First Name">
+      </div>
+    </div>
+    <div>
+      <label for="lastname">Last Name</label>
+      <div>
+        <input type="text" data-ng-model="lastname" id="lastname" placeholder="Last Name">
+      </div>
+    </div>
+    <div>
+      <label for="Building">Building</label>
+      <select data-ng-model="Building" id="Building" required name="Select Building">
+          <option value="Clubhouse">Clubhouse</option>
+          <option value="Continental">Continental</option>
+          <option value="Harrington">Harrington</option>
+          <option value="Moore">Moore</option>
+          <option value="Park Place Towers">Park Place Towers</option>
+          <option value="Plemons">Plemons</option>
+          <option value="Talmage">Talmage</option>
+          <option value="Ware">Ware</option>
+      </select>
+    </div>
+    <div>
+      <label for="AptNumber">Apartment Number</label>
+      <div>
+        <input type="text" data-ng-model="AptNumber" id="AptNumber" placeholder="AptNumber">
+      </div>
+    </div>
+    <label for="ProblemDescription">Content</label>
+      <div>
+        <textarea data-ng-model="ProblemDescription" id="ProblemDescription" cols="30" rows="10" placeholder="ProblemDescription"></textarea>
+      </div>
+    </div>
+      <label for="PhoneNumber">Phone Number</label>
+      <div>
+        <input type="text" data-ng-model="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber">
+      </div>
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+    <div data-ng-show="error">
+      <strong data-ng-bind="error"></strong>
+    </div>
+  </form>
+</section>
