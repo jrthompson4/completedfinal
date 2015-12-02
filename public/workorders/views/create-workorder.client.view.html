@@ -1,29 +1,35 @@
-<section data-ng-controller="WorkOrderController">
-      <ul>
-      <li><a href="/#!/workorders">List Work Orders</a></li>
-      <li><a href="/#!/workorders/create">Create Work Orders</a></li>
-      <li><a href="/#!/workorders/:workorderId">View Work Order</a></li>
-      <li><a href="/#!/workorders/:workorderId/edit">Edit Work Order</a></li>
+<section data-ng-controller="WorkOrderController" style="background-color:#BDBDBD;">
+     <div    style="line-height:30px; background-color:#BDBDBD; height:600px; width:100px; float:left; padding:5px;" >
+     <ul>
+      <li><a href="/#!/workorders">List</a></li>
+      <li><a href="/#!/workorders/create">Create</a></li>
+      <li><a href="/#!/workorders/:workorderId">View</a></li>
+      
     </ul>
-<h1>New Work Order</h1>
+     </div>
+     <div     style="
+    height:600px;
+    padding:10px;
+    background-color:#BDBDBD" >
+<h1 align="center">New Work Order</h1>
 
 
   <form data-ng-submit="create()" novalidate>
     
-    <div>
+    <div align="center">
       <label for="firstname">First Name</label>
       <div>
         <input type="text" data-ng-model="firstname" id="firstname" placeholder="First Name">
-      </div>
+      </div><br>
     </div>
-    <div>
+    <div align="center">
       <label for="lastname">Last Name</label>
       <div>
         <input type="text" data-ng-model="lastname" id="lastname" placeholder="Last Name">
-      </div>
+      </div><br>
     </div>
-    <div>
-      <label for="Building">Building</label>
+    <div align="center">
+      <label for="Building">Building</label><br>
       <select data-ng-model="Building" id="Building" required name="Select Building">
           <option value="Clubhouse">Clubhouse</option>
           <option value="Continental">Continental</option>
@@ -34,26 +40,29 @@
           <option value="Talmage">Talmage</option>
           <option value="Ware">Ware</option>
       </select>
-    </div>
-    <div>
-      <label for="AptNumber">Apartment Number</label>
+    </div><br>
+    <div align="center">
+        <label for="AptNumber">Apartment Number</label>
       <div>
         <input type="text" data-ng-model="AptNumber" id="AptNumber" placeholder="AptNumber">
-      </div>
+      </div><br>
     </div>
-    <label for="ProblemDescription">Content</label>
-      <div>
+    <div align="center">
+        <label for="ProblemDescription">Describe your problem</label><br>
+    
         <textarea data-ng-model="ProblemDescription" id="ProblemDescription" cols="30" rows="10" placeholder="ProblemDescription"></textarea>
-      </div>
     </div>
-      <label for="PhoneNumber">Phone Number</label>
-      <div>
+    <br>
+    <div align="center">
+        <label for="PhoneNumber">Phone Number</label><br>
+      
         <input type="text" data-ng-model="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber">
-      </div>
     </div>
-    <div>
+    <br>
+    <div align="center">
       <input type="submit">
     </div>
+  </div>
     <div data-ng-show="error">
       <strong data-ng-bind="error"></strong>
     </div>

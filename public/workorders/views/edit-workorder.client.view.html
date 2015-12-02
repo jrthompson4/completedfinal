@@ -1,8 +1,17 @@
-<section data-ng-controller="WorkOrderController" data-ng-init="findOne()">
-  <h1>Edit Work Order</h1>
+<section data-ng-controller="WorkOrderController" data-ng-init="findOne()" style="backgournd-color:#BDBDBD">
+     <div    style="line-height:30px; background-color:#BDBDBD; height:600px; width:100px; float:left; padding:5px;" >
+     <ul>
+      <li><a href="/#!/workorders">List</a></li>
+      <li><a href="/#!/workorders/create">Create</a></li>
+      <li><a href="/#!/workorders/:workorderId">View</a></li>
+      
+    </ul>
+     </div>
+     <div style="background-color:#BDBDBD;   padding:10px; height:600px;">
+  <h1 align="center">Edit Work Order</h1>
   <form data-ng-submit="update()" novalidate>
-    <div>
-      <label for="Building">Building</label>
+    <div align="center">
+      <label for="Building">Building</label><br>
       <select data-ng-model="workorder.Building" id="Building" required name="Select Building">
           <option value="Clubhouse">Clubhouse</option>
           <option value="Continental">Continental</option>
@@ -13,27 +22,28 @@
           <option value="Talmage">Talmage</option>
           <option value="Ware">Ware</option>
       </select>
-    </div>
-        <div>
+    </div><br>
+        <div align=center>
       <label for="AptNumber">Apartment Number</label>
       <div>
         <input type="text" data-ng-model="workorder.AptNumber" id="AptNumber" placeholder="AptNumber" required>
-      </div>
+      </div><Br>
     </div>
-    <div>
-      <label for="ProblemDescription">Content</label>
+    <div align=center>
+      <label for="ProblemDescription">Describe your problem</label>
       <div>
         <textarea data-ng-model="workorder.ProblemDescription" id="ProblemDescription" cols="30" rows="10" placeholder="ProblemDescription"></textarea>
       </div>
-    </div>
-        <div>
+    </div><br>
+        <div align=center>
       <label for="PhoneNumber">Phone Number</label>
       <div>
         <input type="text" data-ng-model="workorder.PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber" required>
       </div>
-    </div>
-    <div>
+    </div><br>
+    <div align=center>
       <input type="submit" value="Update">
+    </div>
     </div>
     <div data-ng-show="error">
       <strong data-ng-bind="error"></strong>

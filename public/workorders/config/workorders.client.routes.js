@@ -1,6 +1,12 @@
 angular.module('workorders').config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+        when('/workorders/signin', {
+            templateUrl: 'workorders/views/signin.html'
+        }).
+        when('/workorders/signup', {
+            templateUrl: 'workorders/views/signup.html'
+        }).
         when('/workorders', {
             templateUrl: 'workorders/views/list-workorders.client.view.html'
         }).

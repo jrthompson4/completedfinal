@@ -1,10 +1,15 @@
 <section data-ng-controller="WorkOrderController" data-ng-init="findOne()">
+    <ul>
+      <li><a href="/#!/workorders">List Work Orders</a></li>
+      <li><a href="/#!/workorders/create">Create Work Orders</a></li>
+      <li><a href="/#!/workorders/:workorderId">View Work Order</a></li>
+      <li><a href="/#!/workorders/:workorderId/edit">Edit Work Order</a></li>
+      <li><a href="/#!/workorders/{{workorder._id}}/edit/superuser">Complete work order</a></li>
+    </ul>
   <h1>Edit Work Order</h1>
   <form data-ng-submit="update()" novalidate>
     <div>
       <label for="Building">Building</label>
-      <p></p>
-      <div>
       <select data-ng-model="workorder.Building" id="Building" required name="Select Building">
           <option value="Clubhouse">Clubhouse</option>
           <option value="Continental">Continental</option>
@@ -15,19 +20,15 @@
           <option value="Talmage">Talmage</option>
           <option value="Ware">Ware</option>
       </select>
-      <p></p>
-      </div>
     </div>
         <div>
       <label for="AptNumber">Apartment Number</label>
-      <p></p>
       <div>
         <input type="text" data-ng-model="workorder.AptNumber" id="AptNumber" placeholder="AptNumber" required>
       </div>
-      <p></p>
     </div>
     <div>
-      <label for="ProblemDescription">Describe your problem:</label>
+      <label for="ProblemDescription">Content</label>
       <div>
         <textarea data-ng-model="workorder.ProblemDescription" id="ProblemDescription" cols="30" rows="10" placeholder="ProblemDescription"></textarea>
       </div>
@@ -35,19 +36,10 @@
         <div>
       <label for="PhoneNumber">Phone Number</label>
       <div>
-          <p></p>
         <input type="text" data-ng-model="workorder.PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber" required>
       </div>
     </div>
     <div>
-      <label for="completed">Is Work Order Complete, Please type Yes or No</label>
-      <p></p>
-      <input type="text" data-ng-model="workorder.completed" id="completed" placeholder="completed" required>
-      <div>
-
-      <p></p>
-      </div>
-    </div>
       <input type="submit" value="Update">
     </div>
     <div data-ng-show="error">

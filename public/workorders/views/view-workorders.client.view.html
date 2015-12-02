@@ -1,11 +1,13 @@
-<section data-ng-controller="WorkOrderController" data-ng-init="findOne()">
+<section data-ng-controller="WorkOrderController" data-ng-init="findOne()" style="background-color:#BDBDBD">
+  <div align=center>
   <h1>Work Order</h1>
-  <div data-ng-show="authentication.user._id == workorder.creator._id">
-    <a href="/#!/workorders/{{workorder._id}}/edit">edit</a>
-    <a href="#" data-ng-click="delete();">delete</a>
+  <div>
+    <a href="/#!/workorders/{{workorder._id}}/edit">Edit</a>
+    <a href="#" data-ng-click="delete();">Delete</a>
+    <a href="/">Home</a>
   </div>
   <small>
-    <strong>Building:  </strong><strong data-ng-bind="workorder.Building"></strong><br>S
+    <strong>Building:  </strong><strong data-ng-bind="workorder.Building"></strong><br>
     <strong>Apartment Number:  </strong><strong data-ng-bind="workorder.AptNumber"></strong><br>
     <strong>Problem Description:  </strong><strong data-ng-bind="workorder.ProblemDescription"></strong><br>
     <strong>Phone Number:  </strong><strong data-ng-bind="workorder.PhoneNumber">Phone Number</strong><br>
@@ -16,4 +18,5 @@
     <em data-ng-bind="workorder.created | date:'mediumDate'"></em>
 
   </small>
+  </div>
 </section>
