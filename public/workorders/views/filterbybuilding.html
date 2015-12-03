@@ -1,0 +1,27 @@
+<section data-ng-controller="WorkOrderController" data-ng-init="filter()" style="backgournd-color:#BDBDBD">
+     <div    style="line-height:30px; background-color:#BDBDBD; height:600px; width:100px; float:left; padding:5px;" >
+     <ul>
+      <li><a href="/#!/workorders">List</a></li>
+      <li><a href="/#!/workorders/create">Create</a></li>
+      <li><a href="/#!/workorders/:workorderId">View</a></li>
+      
+    </ul>
+     </div>
+     <div style="background-color:#BDBDBD;   padding:10px; height:600px;">
+  <h1 align="center">Filter Work Orders</h1>
+  <form data-ng-submit="filter()" novalidate>
+    <div align="center">
+      <label for="Building">Building</label><br>
+      <select data-ng-model="workorder.Building" id="Building" required name="Select Building">
+          <option value="Clubhouse">Clubhouse</option>
+          <option value="Continental">Continental</option>
+          <option value="Harrington">Harrington</option>
+          <option value="Moore">Moore</option>
+          <option value="Park Place Towers">Park Place Towers</option>
+          <option value="Plemons">Plemons</option>
+          <option value="Talmage">Talmage</option>
+          <option value="Ware">Ware</option>
+      </select>
+
+  </form>
+</section>

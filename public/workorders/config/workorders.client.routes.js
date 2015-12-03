@@ -10,6 +10,9 @@ angular.module('workorders').config(['$routeProvider',
         when('/workorders', {
             templateUrl: 'workorders/views/list-workorders.client.view.html'
         }).
+        when('/workorders/chart', {
+            templateUrl: 'workorders/views/piechart.html'
+        }).
         when('/workorders/create', {
             templateUrl: 'workorders/views/create-workorder.client.view.html'
         }).
