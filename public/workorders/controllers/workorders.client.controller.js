@@ -56,6 +56,7 @@ angular.module('workorders').controller('WorkOrderController', ['$scope', '$rout
                 $scope.error = errorResponse.data.message;
             });
         };
+    
 
         // Create a new controller method for deleting a single workorder
         $scope.delete = function(workorder) {

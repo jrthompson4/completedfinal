@@ -3,3 +3,4 @@
 
 // Create the 'example' module
 angular.module('example', []);
+//where did you handle your routing...en ng route

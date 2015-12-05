@@ -50,5 +50,5 @@ var WorkOrderSchema = new Schema({
 
 });
 
-// Create the 'Article' model out of the 'ArticleSchema'
+// Create the 'Workorder' model out of the 'WorkOrderSchema'
 mongoose.model('WorkOrder', WorkOrderSchema);

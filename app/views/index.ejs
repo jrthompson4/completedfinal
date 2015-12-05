@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:ng="http://angularjs.org" style="background-color:#BDBDBD">
 <head>
+
+
 	<!-- Use the 'title' property to render a page title  -->
 	<h1 align=center>Welcome to the Baptist Community Services Work Order System:</h1>
-	<a href="/#!/workorders/signin">Signin</a>
-	<a href="/#!/workorders/signup">Sign Up</a>
-	<a href="/signout" align="right">Signout</a>
+	<button onclick="window.location.href='/#!/workorders/signin'">Sign In</button>
+	<button onclick="window.location.href='/#!/workorders/signup'">Sign Up</button>
+	<button onclick="window.location.href='/signout'">Sign Out</button>
+
 	<title><%= title %></title>
 	
 </head>
@@ -17,6 +20,7 @@
 	<script type="text/javascript">
 		window.user = <%- user || 'null' %>;
 	</script>
+
 	
 
 	
